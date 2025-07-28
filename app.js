@@ -171,6 +171,11 @@ const game = {
   ],
 }
 
+
+// console.dir(pokemon, { maxArrayLength: null });
+// console.log(pokemon[58].name);
+// console.dir()
+
 // console.log(game.gyms);
 // console.log(game.party);
 // console.log(game.items);
@@ -279,7 +284,7 @@ for (let i = 0; i < game.party.length; i++) {
   }
 }
 
-// console.log(game.party);
+console.log("look for this -->" , game.party);
 
 //=============================================================================================================
 /*
@@ -291,7 +296,7 @@ Solve Exercise 8 here:
 */
 
 for (let i = 0; i < game.party.length; i++) {
-    console.log(game.party[i].name);
+    // console.log(game.party[i].name);
 }
 
 //================================================================================================================
@@ -307,7 +312,7 @@ Solve Exercise 9 here:
 
 for (let i = 0; i < pokemon.length; i++) {
   if (pokemon[i].starter === true) { // identify pokemon stater to be true
-    console.log(pokemon[i].name);
+    // console.log(pokemon[i].name);
   }
 }
 
@@ -360,7 +365,7 @@ const meowth = pokemon.find(pokemons => pokemons.name === "Meowth");
 
 game.catchPokemon(meowth);
 
-console.log(game.items);
+// console.log(game.items);
 
 //=======================================================================================================================
 /*
@@ -418,7 +423,7 @@ game.gymStatus = function() {
   }
 
   
-  console.log(gymTally);
+  // console.log(gymTally);
 };
 
 game.gymStatus();
@@ -438,8 +443,8 @@ Solve Exercise 14 here:
 game.partyCount = function() {
   return this.party.length;
 };
-console.log(game.party);
-console.log("Number of Pokémon in party:", game.partyCount());
+// console.log(game.party);
+// console.log("Number of Pokémon in party:", game.partyCount());
 
 //=========================================================================================================
 /*
@@ -465,4 +470,18 @@ Exercise 16
 Solve Exercise 16 here:
 */
 
-console.log(game);
+// console.log(game);
+
+//=======================================================================================================
+/*
+Exercise 17
+1. Arrange the Pokémon in `game.party` by their HP. The one with the highest HP should come first.
+2. You'll need to use the `.sort()` method. How does the compare function work in sorting numbers?
+
+
+Solve Exercise 17 here:
+*/
+game.party.sort((a, b) => b.hp - a.hp);
+
+// console.log(game.party);
+//========================================================================================================
